@@ -15,29 +15,25 @@ use the fonts in other ways in the font hierarchy etc. */
 /* change / delete some of these - note: all variables are listed twice */
 
 :root {
-  --bg-color: pink;
-  --link-color: green;
-  --link-hover-color: blue;
-  --color-4: hotpink;
-  --color-5: rebeccapurple;
+  --bg-color: #363434;
+  --main-color: #e3d9c6;
+  --coffee-color: #843a22;
+  --light-color: #ebe7e0;
+  --blue-color: #7ca2c8;
+  --purple-color: #a68fb6;
 
-  --primary-font: "Open Sans", sans-serif;
-  --secondary-font: "Droid Serif", serif;
-  --main-text-color: #000;
+  --color1: #421908;
+  --color2: #a85d30;
+  --color3: #ce8b5c;
+  --color4: #ecccb4;
+  --color5: #dce1e7;
+
+  --primary-font: "jubilat", serif;
+
+  --secondary-font: "century-gothic", serif;
+  --main-text-color: #363434;
 
   --white-space: 1rem;
-
-  --bg-color: #000;
-  --link-color: #000;
-  --link-hover-color: #000;
-  --color-4: #000;
-  --color-5: #000;
-
-  --primary-font: sans-serif;
-  --secondary-font: serif;
-  --main-text-color: #000;
-
-  --white-space: 2rem;
 }
 
 html {
@@ -59,7 +55,7 @@ footer {
 }
 
 .full-width {
-  background: var(--bg-color);
+  background: var(--color5);
   color: white;
   width: 100%;
 }
@@ -67,30 +63,41 @@ footer {
 .header-wrapper h1 {
   font-size: 3rem;
   text-transform: uppercase;
-  letter-spacing: -2px;
+
   padding-right: 0.75em;
-  font-weight: bold;
-  color: white;
+  font-weight: 400;
+  color: var(--color5);
 }
 
 .header-wrapper h2 {
   font-size: 1.6em;
-  color: rgba(255, 255, 255, 0.95);
-  font-weight: bold;
+  color: var(--color5);
+  font-weight: 400;
   margin: var(--white-space) 0;
 }
 
 .header-wrapper h3 {
   font-size: 1.2rem;
   font-style: italic;
+  color: var(--color5);
 }
 
 .header-wrapper h4 {
   font-size: 0.8rem;
+  color: var(--color5);
 }
 
 main {
   padding: calc(2 * var(--white-space));
+  background-color: var(--color4);
+}
+
+header {
+  background-color: var(--bg-color);
+}
+
+body {
+  background-color: var(--color5);
 }
 
 section {
@@ -110,6 +117,10 @@ ul {
   justify-content: space-between;
 }
 
+.swatchgrid {
+  gap: 10px;
+}
+
 .swatches li {
   margin-right: 5vw;
   height: 15vw;
@@ -125,41 +136,47 @@ ul li:last-child {
 }
 
 .color-swatch-2 {
-  background-color: var(--link-color);
+  background-color: var(--color1);
 }
 
 .color-swatch-3 {
-  background-color: var(--link-hover-color);
+  background-color: var(--color2);
 }
 
 .color-swatch-4 {
-  background-color: var(--color-4);
+  background-color: var(--color3);
 }
 
 .color-swatch-5 {
-  background-color: var(--color-5);
+  background-color: var(--color5);
+}
+
+.color-swatch-6 {
+  background-color: var(--color5);
 }
 
 .textures li {
   height: 30vw;
-  width: 40%;
-  margin-right: 5vw;
+  width: 100%;
+  margin-right: 0vw;
 }
 
 .texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
+  background: url(../img/espresso-blend.jpg) top left repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .texture-swatch-2 {
-  background: url(../img/subtle_grunge.png) top left repeat;
-}
-
-.texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
+  background: url(../img/Logo\ -\ full.jpg) top left repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .texture-swatch-3 {
-  background: url(../img/white_paperboard.png) top left repeat;
+  background: url(../img/Story\ eksempel\ 2.jpg) top left repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .images ul {
@@ -180,39 +197,42 @@ ul li:last-child {
 }
 
 button {
-  padding: 1rem;
-  border-radius: 4px;
-  background: var(--link-color);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 0px;
+  background: var(--blue-color);
   text-align: center;
   text-decoration: none;
-  font: bold 1.25em/1 var(--primary-font);
+  font: var(--primary-font);
   letter-spacing: 1px;
-  color: white;
-  text-transform: uppercase;
-  text-shadow: 0px -1px 0px #0374a0;
+  color: var(--light-color);
   transition: all 0.2s ease;
   cursor: pointer;
+  border: 2px solid var(--blue-color);
   /* margin: 0 1rem 0 0; */
 }
 
 .secondary-button {
-  background: var(--color-5);
+  background: var(--color2);
+  border: 2px solid var(--color2);
 }
 
 button:focus,
 button:active,
 button:focus-within {
   outline: 0;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 button:hover {
-  background-color: var(--link-hover-color);
-  transform: scale(3) rotate(40deg);
+  transform: scale(1.1);
 }
 
 button:active {
-  background-color: var(--bg-color);
+  background-color: var(--color1);
+  border: 2px solid var(--color1);
 }
 
 .typography-main {
@@ -222,18 +242,21 @@ button:active {
 .h1-sample {
   font-size: 2.4rem;
   font-weight: bold;
+  color: var(--color1);
 }
 
 .h2-sample {
   font-family: var(--secondary-font);
   font-style: italic;
   font-size: 1.25rem;
+  color: var(--color1);
 }
 
 p.typography-sample {
   font-family: var(--secondary-font);
   line-height: 1.5;
   max-width: 960px;
+  color: var(--bg-color);
 }
 
 strong {
@@ -245,18 +268,15 @@ em {
 }
 
 a {
-  font-family: var(--primary-font);
-  color: var(--link-color);
+  font-family: var(--secondary-font);
+  color: var(--blue-color);
   font-weight: bold;
   text-decoration: none;
   transition: all 0.2s;
 }
 
 a:hover {
-  color: var(--link-hover-color);
-  font-size: 4rem;
-  background-color: var(--color-4);
-  opacity: 0.1;
+  color: var(--color5);
 }
 
 p[class*="font-details-"] {
@@ -270,7 +290,8 @@ p[class*="font-details-"] {
 
 .adjectives ul {
   font-size: 2rem;
-  opacity: 0.5;
+
+  color: var(--color1);
 }
 
 .adjectives ul {
@@ -279,6 +300,7 @@ p[class*="font-details-"] {
 
 footer {
   font-style: italic;
+  background-color: var(--bg-color);
 }
 
 @media (min-width: 800px) {
@@ -295,7 +317,7 @@ footer {
   }
 
   .textures li {
-    height: 15vw;
+    height: 20vw;
   }
 }
 
